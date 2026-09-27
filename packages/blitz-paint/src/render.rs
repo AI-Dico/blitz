@@ -914,6 +914,7 @@ impl ElementCx<'_, '_> {
                 self.context.dom,
                 transform,
                 self.node.id,
+                self.scale,
             );
 
             // Render text selection highlight (if any) using cached selection ranges
@@ -924,6 +925,8 @@ impl ElementCx<'_, '_> {
                     transform,
                     sel_start,
                     sel_end,
+                    self.context.dom,
+                    self.node.id,
                 );
             }
 
